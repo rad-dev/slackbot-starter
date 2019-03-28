@@ -107,4 +107,4 @@ venv.bak/
 .idea/
 
 # credentials
-src/settings.py
+src/tokens.py
