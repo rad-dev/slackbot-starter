@@ -107,4 +107,4 @@ venv.bak/
 .idea/
 
 # credentials
-src/credentials.py
+src/config.py
