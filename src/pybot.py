@@ -43,8 +43,9 @@ class PyBot:
         # Finds and executes the given command, filling in response
         response = None
         # This is where you start to implement more commands!
-        if command.startswith(commands.DEFAULT_COMMAND):
-            response = "Sure...write some more code then I can do that!"
+        if command.startswith(commands.SAY_HELLO):
+            response = responses.SAY_HELLO
+
 
         # Sends the response back to the channel
         self.slack_client.api_call(
