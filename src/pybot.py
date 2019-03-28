@@ -45,7 +45,10 @@ class PyBot:
         # This is where you start to implement more commands!
         if command.startswith(commands.SAY_HELLO):
             response = responses.SAY_HELLO
-
+        elif command.startswith(commands.FP_CREDS):
+            response = responses.FP_CREDS
+        elif command.startswith(commands.HZ_CREDS):
+            response = responses.HZ_CREDS
 
         # Sends the response back to the channel
         self.slack_client.api_call(
