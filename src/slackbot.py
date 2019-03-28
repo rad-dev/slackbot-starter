@@ -2,9 +2,10 @@ import time
 from src.pybot import PyBot
 
 from src import settings
+from src.tokens import SLACKBOT_TOKEN
 
 if __name__ == "__main__":
-    pybot = PyBot(settings.SLACKBOT_TOKEN)
+    pybot = PyBot(SLACKBOT_TOKEN)
 
     if pybot.is_connected():
         print("Starter Bot connected and running!")

@@ -2,6 +2,7 @@ import re
 from slackclient import SlackClient
 from src import settings
 from src import commands
+from src import responses
 
 
 class PyBot:
@@ -38,8 +39,6 @@ class PyBot:
         """
             Executes bot command if the command is known
         """
-        # Default response is help text for the user
-        default_response = "Not sure what you mean. Try *{}*.".format(commands.DEFAULT_COMMAND)
 
         # Finds and executes the given command, filling in response
         response = None
@@ -51,7 +50,7 @@ class PyBot:
         self.slack_client.api_call(
             "chat.postMessage",
             channel=channel,
-            text=response or default_response
+            text=response or responses.DEFAULT_RESPONSE
         )
 
     def is_connected(self):
